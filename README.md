@@ -269,7 +269,7 @@ https://github.com/yash-shukla07
 
 ### Email
 
-👉 Add Your Email Here
+👉 shukla.yash0907@gmail.com
 
 ---
 

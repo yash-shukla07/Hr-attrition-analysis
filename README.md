@@ -1,137 +1,276 @@
-📊 HR Attrition Analytics Dashboard
+# 📊 HR Analytics Dashboard - End-to-End Data Analytics Project
 
-A complete end-to-end data analytics project analyzing employee attrition patterns using Python, MySQL, and Power BI.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Power BI](https://img.shields.io/badge/Power_BI-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
+---
 
-📁 Project Structure
+# 📌 About This Project
 
-HR-Attrition-Analytics/
+Hi, I'm **Yash Shukla**, an aspiring **Data Analyst** from India.
+
+This is my **second end-to-end data analytics project**, where I performed the complete analytics workflow—from cleaning raw HR data using **Python**, analyzing employee attrition using **MySQL**, and building an interactive **Power BI Dashboard** to generate actionable business insights.
+
+The objective of this project is to understand the major factors influencing employee attrition and help HR teams identify high-risk employees, improve retention strategies, and support data-driven decision-making.
+
+The dataset contains **1,470 employee records** with demographic, job, salary, performance, and attrition information.
+
+---
+
+# 📊 Dashboard Preview
+
+## 🏠 Overview Dashboard
+
+- Total Employees
+- Employees Left
+- Employees Stayed
+- Overall Attrition Rate
+- Department-wise Attrition
+- Age Group Analysis
+- Experience Analysis
+- Overtime Impact
+- Interactive Slicers
+- Executive Business Insights
+
+---
+
+## 🔍 Detailed Factors Dashboard
+
+- Job Role Analysis
+- Distance from Home Analysis
+- Monthly Income Analysis
+- Education Field Analysis
+- Marital Status Analysis
+- Detailed Business Insights
+
+---
+
+# 📈 Key Business Insights
+
+- Employees with **0–2 years of experience** have the highest attrition rate (**30%**), with attrition decreasing significantly as employee tenure increases.
+- Employees working **overtime** are approximately **3 times more likely** to leave the organization compared to employees who do not work overtime (**31% vs 10%**).
+- **Sales Representatives** record the highest attrition rate (**40%**) among all job roles.
+- Employees earning **₹1,000–₹5,000** monthly experience the highest employee turnover, indicating income significantly impacts retention.
+- Employees commuting **20–25 km** from home show the highest attrition, suggesting longer travel distances contribute to employee turnover.
+- **Single employees** have a higher attrition rate compared to married and divorced employees.
+- Employees from the **Human Resources education field** exhibit the highest attrition among all education backgrounds.
+
+---
+
+# 🛠️ Tools & Technologies Used
+
+| Tool | Purpose |
+|------|---------|
+| Python | Data Cleaning & Preprocessing |
+| Pandas | Data Manipulation |
+| NumPy | Numerical Operations |
+| Matplotlib | Exploratory Data Analysis |
+| SQLAlchemy | Export Clean Data to MySQL |
+| MySQL 8.0 | Data Analysis & KPI Calculation |
+| Power BI | Interactive Dashboard Development |
+
+---
+
+# 📂 Project Structure
+
+```
+HR-Analytics-Dashboard/
+
 │
-├── HR_DATA.csv                  # Raw dataset (IBM HR Analytics)
-├── hr_data_cleaning.py          # Python data cleaning + EDA script
-├── hr_analysis.sql              # SQL analysis queries
-└── README.md                    # Project documentation
+├── 01_Dataset/
+│   └── HR_DATA.csv
+│
+├── 02_Python/
+│   └── hr_data_cleaning.py
+│
+├── 03_SQL/
+│   └── hr_attrition_analysis.sql
+│
+├── 04_PowerBI/
+│   └── HR_Analytics_Dashboard.pbix
+│
+├── 05_Screenshots/
+│   ├── Overview_Dashboard.png
+│   └── Detailed_Factors_Dashboard.png
+│
+└── README.md
+```
 
+---
 
-🎯 Problem Statement
+# 🐍 Python Workflow
 
-Employee attrition is a major cost for organizations — hiring, training, and knowledge loss add up significantly. This project analyzes 1,470 employee records to identify:
+✔ Loaded HR dataset
 
+✔ Inspected dataset
 
-Which factors drive employees to leave
-Which departments, roles, and demographics are at highest risk
-Key actionable insights for HR teams to improve retention
+✔ Checked missing values
 
+✔ Removed duplicate records
 
+✔ Renamed column names
 
-🛠️ Tools & Technologies
+✔ Dropped unnecessary columns
 
-ToolPurposePython (Pandas, NumPy, Matplotlib)Data cleaning, EDA, visualizationsMySQLData storage + SQL-based analysisPower BIInteractive dashboard creationSQLAlchemyPython to MySQL connection
+✔ Created Age Group feature
 
+✔ Performed Exploratory Data Analysis (EDA)
 
-📦 Dataset
+✔ Generated summary statistics
 
+✔ Exported cleaned dataset directly into MySQL
 
-Source: IBM HR Analytics Employee Attrition Dataset
-Records: 1,470 employees
-Features: 35 columns (demographic, job-related, satisfaction scores)
-Target Variable: Attrition (Yes/No)
+---
 
+# 🗄 SQL Analysis
 
+The following business analyses were performed using MySQL:
 
-🧹 Data Cleaning (Python)
+- Total Employees
+- Employees Left
+- Employees Stayed
+- Overall Attrition Rate
+- Department-wise Attrition Rate
+- Job Role-wise Attrition Rate
+- Experience-wise Attrition Rate
+- Monthly Income Analysis
+- Distance from Home Analysis
+- Overtime Impact Analysis
+- Education Field Analysis
+- Marital Status Analysis
+- Business Travel Analysis
+- Salary Hike Analysis
+- Age Group Analysis
 
-File: hr_data_cleaning.py
+---
 
-Steps performed:
+# 📊 Dashboard Pages
 
+## 1️⃣ Overview Dashboard
 
-Loaded raw CSV data and inspected shape, dtypes, null values, duplicates
-Standardized column names to lowercase snake_case
-Dropped constant/useless columns — StandardHours, EmployeeCount, Over18 (same value for all rows — no analytical value)
-Checked unique values and value counts for all categorical columns
-Created new feature — age_group (Young / Mid-Age / Senior Employees)
-Calculated attrition percentage (Stayed: 83.88%, Left: 16.12%)
-Generated basic EDA visualizations using Matplotlib
-Exported cleaned data to MySQL (hr_db.hr_attrition table)
+- Total Employees KPI
+- Employees Left KPI
+- Employees Stayed KPI
+- Overall Attrition Rate KPI
+- Department-wise Attrition
+- Age Group Analysis
+- Experience Analysis
+- Overtime Analysis
+- Executive Insights
 
+---
 
-EDA Visualizations generated:
+## 2️⃣ Detailed Factors Dashboard
 
+- Job Role Analysis
+- Distance vs Attrition
+- Income vs Attrition
+- Marital Status Analysis
+- Education Field Analysis
+- Business Insights
 
-Attrition Count (Bar Chart)
-Age Distribution (Histogram)
-Employee Count by Department (Bar Chart)
-Monthly Income Distribution (Histogram)
-Employee Count by Gender (Bar Chart)
-Employee Count by Age Group (Bar Chart)
+---
 
+# 💡 Business Questions Solved
 
+- Which department has the highest employee attrition?
+- Which job role experiences the highest turnover?
+- Does overtime significantly affect employee attrition?
+- Which experience group is most likely to leave?
+- Does monthly income impact employee retention?
+- How does commuting distance affect attrition?
+- Which education field has the highest turnover?
+- Which marital status category has the highest attrition?
 
-🗃️ SQL Analysis
+---
 
-File: hr_analysis.sql
-Database: hr_db
-Table: hr_attrition
+# 🎯 Skills Demonstrated
 
-Queries covered:
+- Data Cleaning
+- Data Preprocessing
+- Exploratory Data Analysis (EDA)
+- Feature Engineering
+- SQL Query Writing
+- Business KPI Development
+- Dashboard Design
+- Data Visualization
+- Business Intelligence
+- HR Analytics
+- Business Storytelling
 
-AnalysisDescriptionOverall Attrition Rate16.12% overall attritionDepartment-wise AttritionSales highest (21%), R&D lowest (14%)Overtime ImpactOvertime employees attrite at 31% vs 8%Experience/Tenure Analysis0-2 year employees have highest attrition (30%)Distance from HomeEmployees 20-25km away have highest attrition (27%)Marital StatusSingle employees attrite most (25%)Job Role AnalysisSales Representatives highest (40%)Salary Hike ImpactLower hike % employees more likely to leaveBusiness Travel + Education FieldCombined factor analysis
+---
 
-Core SQL technique used throughout:
+# 📚 What I Learned
 
-sqlROUND(SUM(CASE WHEN attrition="Yes" THEN 1 ELSE 0 END) * 100 / COUNT(*), 2)
+- Cleaning and transforming raw HR datasets using Python.
+- Writing analytical SQL queries using **CASE**, **GROUP BY**, **Aggregate Functions**, and **Views**.
+- Building professional Power BI dashboards with KPIs, slicers, and interactive visuals.
+- Converting raw business data into actionable insights.
+- Understanding HR metrics and employee attrition patterns.
+- Presenting insights through effective dashboard storytelling.
 
-This calculates attrition rate per group without needing subqueries.
+---
 
+# 🚀 Business Value
 
-📊 Power BI Dashboard
+This dashboard helps HR teams:
 
-2-page interactive dashboard built on cleaned MySQL data.
+- Identify employees at high risk of leaving.
+- Understand key drivers of employee attrition.
+- Improve employee retention strategies.
+- Support workforce planning.
+- Enable data-driven HR decision-making.
 
-Page 1 — Overview
+---
 
+# 📷 Dashboard Screenshots
 
-KPI Cards: Total Employees, Employees Left, Employees Stayed, Attrition Rate
-Attrition Rate by Department (Donut Chart)
-Attrition Rate by Age Group (Bar Chart)
-Impact of Overtime on Attrition (Line Chart)
-Attrition Rate by Experience (Line Chart)
-Slicers: Age Group, Department
-Key Insights panel
+## 🏠 Overview Dashboard
 
+> Add your Overview Dashboard screenshot here.
 
-Page 2 — Detailed Factors
+---
 
+## 🔍 Detailed Factors Dashboard
 
-KPI Cards: Total Job Roles, Avg Experience, Attrition Rate, Avg Monthly Income
-Attrition Rate by Job Role (Horizontal Bar Chart)
-Attrition Rate vs Distance from Home (Bar Chart)
-Attrition Rate by Income Group (Line Chart)
-Attrition Rate by Marital Status (Donut Chart)
-Attrition Rate by Education Field (Pie Chart)
-Slicers: Job Roles, Education Field
-Key Insights panel
+> Add your Detailed Factors Dashboard screenshot here.
 
+---
 
+# ⭐ Future Improvements
 
-🔍 Key Findings
+- Add drill-through pages.
+- Create advanced DAX measures.
+- Include predictive attrition analysis using Machine Learning.
+- Add employee performance analysis.
+- Integrate real-time HR database connection.
 
+---
 
-Income is the strongest driver — Employees earning ₹1,000–5,000/month attrite at 21.76%, nearly 6x the rate of those earning ₹15,000+ (3.76%)
-Overtime significantly increases attrition risk — Overtime employees attrite at 31%, vs 8% for those without overtime (3x more likely to leave)
-New employees are most at risk — Employees with 0–2 years tenure have the highest attrition (30%), dropping sharply to 8% beyond 10 years
-Sales Representatives have the highest job-role attrition rate at 40%
-Single employees are more likely to leave (25%) compared to married (12%) and divorced (10%)
-R&D department is the most stable (14% attrition vs Sales 21%)
+# 👨‍💻 About Me
 
+Hi, I'm **Yash Shukla**, an aspiring **Data Analyst** passionate about transforming raw data into meaningful business insights using **Python, SQL, and Power BI**.
 
+I'm continuously building real-world analytics projects to strengthen my problem-solving skills and prepare for a career in Data Analytics.
 
-💡 Business Recommendations
+---
 
+# 📬 Connect With Me
 
-Review compensation for entry-level/low-salary employees — income is the #1 attrition driver
-Implement overtime management policies — overtime employees are 3x more likely to leave
-Focus retention efforts on employees in their first 2 years (highest risk window)
-Design targeted retention programs for Sales Representatives (40% attrition)
-Consider remote/flexible work options for employees commuting 20+ km
+### GitHub
+
+https://github.com/yash-shukla07
+
+### LinkedIn
+
+👉 Add Your LinkedIn Profile Here
+
+### Email
+
+👉 Add Your Email Here
+
+---
+
+## ⭐ If you found this project helpful, consider giving it a Star!
